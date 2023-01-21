@@ -1,10 +1,27 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/legacy/image';
 
 function Header() {
   return (
-    <div>
-        <h1>I am the header</h1>
-    </div>
+    <header>
+        {/*left */}
+        <div className="relative flex items-center h-10 cursor-pointer">
+            <Image
+                src='https://links.papareact.com/qd3'
+                alt=""
+                layout='fill'
+                objectFit='contain' // Will keep object ratio
+                objectPosition='left'
+            />
+        </div>
+
+        {/*middle */}
+        <div></div>
+
+        {/*right */}
+        <div></div>
+
+    </header>
   )
 }
 

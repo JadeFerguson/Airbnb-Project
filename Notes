@@ -1,3 +1,12 @@
 - Index of JS file represents the home point, where everything starts from
 - npm run dev to start and run application
 - Next Js has a built in router
+- Extensions allow for easier coding like getting boilerplate code for functions
+
+
+
+
+
+
+
+- Added extensions: ES7 React/redux...by dsznajdar and intellisense for tailwind css

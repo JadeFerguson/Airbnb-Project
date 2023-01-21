@@ -1,20 +1,20 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+import Header from '../Components/Header';
 
-const inter = Inter({ subsets: ['latin'] })
-
+// Functional component can make one component in react and use it multiple times
 export default function Home() {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2'>
+    <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>Airbnb</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Lets build Airbnb</h1>
-      
+      {/*Self closed header */}
+      <Header />
+
+      {/*Banner */}
+
     </div>
   );
 }

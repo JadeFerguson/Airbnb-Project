@@ -39,7 +39,7 @@ function Header() {
 
         {/*right */}
         {/*Space out all the children elements space-x-4
-            md:... in medium screen so this
+            md:... in medium screen do this
         */}
         <div className="flex items-center space-x-4 justify-end text-gray-500">
             <p className="hidden md:inline cursor-pointer">Become a host</p>

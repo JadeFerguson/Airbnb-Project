@@ -2,8 +2,8 @@
 - npm run dev to start and run application
 - Next Js has a built in router
 - Extensions allow for easier coding like getting boilerplate code for functions
-
-
+- Use correct tags for things such as header as it helps a lot in the end
+- Have to configure next.config.js to allow other domains for photos
 
 
 

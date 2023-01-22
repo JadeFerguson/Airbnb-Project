@@ -12,8 +12,8 @@ function Header() {
                 src='https://links.papareact.com/qd3'
                 alt=""
                 layout='fill'
-                object-fit='contain' // Will keep object ratio
-                object-position='left'
+                objectFit='contain' // Will keep object ratio
+                objectPosition='left'
             />
         </div>
 

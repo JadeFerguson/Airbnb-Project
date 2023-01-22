@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Resources
 - [Tailwind Install](https://tailwindcss.com/docs/guides/nextjs)
-- [HeroIcons](https://heroicons.com/)
+- [Hero Icons](https://heroicons.com/) for search bar icon

@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import Banner from '../Components/Banner';
 import Header from '../Components/Header';
+import MediumCard from '../Components/MediumCard';
 import SmallCard from '../Components/SmallCard';
 
 // Functional component can make one component in react and use it multiple times
 // Putting explore data through function will pull it apart
-export default function Home({exploreData }) {
+export default function Home({exploreData, cardsData}) {
   return (
     <div className="">
       <Head>
@@ -38,6 +39,19 @@ export default function Home({exploreData }) {
               />
             ))}
           </div>
+          <section>
+            <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+            
+            <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
+              {cardsData?.map(({img, title}) => (
+                <MediumCard 
+                  key={img}
+                  img={img}
+                  title={title}
+                />
+              ))}
+            </div>
+          </section>
         </section>
       </main>
 
@@ -47,8 +61,13 @@ export default function Home({exploreData }) {
 
 // Only works in pages
 export async function getStaticProps() {
-  // Have to use jsonkeeper link for this to work
+  // Have to use json keeper link for this to work
   const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").
+  then(
+    (res) => res.json()
+  );
+
+  const cardsData = await fetch("https://www.jsonkeeper.com/b/VHHT").
   then(
     (res) => res.json()
   );
@@ -56,6 +75,7 @@ export async function getStaticProps() {
   return {
     props: {
       exploreData,
+      cardsData,
     },
   };
 }

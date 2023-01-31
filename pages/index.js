@@ -27,15 +27,17 @@ export default function Home({exploreData }) {
           {/*Pull some data from from a server - using server side rendering with every request that happens on
           page it will re-render(there is also static only renders once) - API endpoints
           The {} allows to have JS in html */}
-          {exploreData?.map(({img, distance, location}) => (
-            <SmallCard 
-            key={img}
-              img={img}
-              distance={distance}
-              location={location}
-            />
-          ))}
-
+          
+          <div className="grid grid-cols sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {exploreData?.map(({img, distance, location}) => (
+              <SmallCard 
+                key={img}
+                img={img}
+                distance={distance}
+                location={location}
+              />
+            ))}
+          </div>
         </section>
       </main>
 

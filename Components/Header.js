@@ -38,6 +38,18 @@ function Header() {
     setSearchInput("");
   }
 
+  const search = () => {
+    router.push({
+        pathname: '/search',
+        query: {
+            location: searchInput,
+            startDate: startDate.toISOString(),
+            endDate: endDate.toISOString(),
+            noOfGuests,
+        },
+    });
+  };
+
   return (
     // z index makes sure it is always at the front
     // We made background of bar white as it is originally transparent so if it is sticky
@@ -106,7 +118,7 @@ function Header() {
                 </div>
                 <div className="flex">
                     <button onClick={resetInput} className="flex-grow text-gray-500">Cancel</button>
-                    <button className="flex-grow text-red-400">Search</button>
+                    <button onClick={search} className="flex-grow text-red-400">Search</button>
                 </div>
             </div>
         )}

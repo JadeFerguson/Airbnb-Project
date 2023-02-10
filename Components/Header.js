@@ -11,6 +11,7 @@ import { useState } from 'react';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
+import { useRouter } from 'next/router'
 
 
 function Header() {
@@ -19,6 +20,7 @@ function Header() {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [noOfGuests, setNoOfGuests] = useState(1);
+  const router = useRouter();
 
   const selectionRange = {
     startDate: startDate,
@@ -42,7 +44,8 @@ function Header() {
     // and things move we can see behind. Also md:px-10 is a media query so fixes screen for smaller sizes
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
         {/*left */}
-        <div className="relative flex items-center h-10 cursor-pointer
+        <div onClick={() => router.push("/")}
+        className="relative flex items-center h-10 cursor-pointer
             my-auto">
             <Image
                 src="https://links.papareact.com/qd3"

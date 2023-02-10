@@ -29,6 +29,11 @@ function Header() {
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
+ 
+  }
+
+  const resetInput = () => {
+    setSearchInput("");
   }
 
   return (
@@ -96,8 +101,9 @@ function Header() {
                         min={1}
                         className="w-12 pl-2 text-lg outline-none text-red-400"/>
                 </div>
-                <div>
-
+                <div className="flex">
+                    <button onClick={resetInput} className="flex-grow text-gray-500">Cancel</button>
+                    <button className="flex-grow text-red-400">Search</button>
                 </div>
             </div>
         )}

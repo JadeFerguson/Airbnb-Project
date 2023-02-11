@@ -38,7 +38,8 @@ function Search({searchResults}) {
         </main>
 
         <div className="flex flex-col">
-            {searchResults.map(({img, location, title, description, star, price, total }) (
+            {searchResults.map(
+                ({ img, location, title, description, star, price, total }) => (
                 <InfoCard 
                     key={img}
                     img={img}
@@ -60,7 +61,7 @@ function Search({searchResults}) {
 export default Search;
 
 export async function getServerSideProps() {
-    const searchResults = await fetch("https://links.papareact.com/isz")
+    const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS")
     .then(res => res.json());
 
     return {

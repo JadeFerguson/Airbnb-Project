@@ -3,9 +3,10 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import { useRouter } from 'next/router';
 import {format} from "date-fns";
+import InfoCard from '../Components/InfoCard';
 
 // Great thing about components with react you can use them across different pages
-function Search() {
+function Search({searchResults}) {
     const router = useRouter();
 
     // es6 destructuring
@@ -36,9 +37,35 @@ function Search() {
             </section>
         </main>
 
+        <div className="flex flex-col">
+            {searchResults.map(({img, location, title, description, star, price, total }) (
+                <InfoCard 
+                    key={img}
+                    img={img}
+                    location={location}
+                    title={title}
+                    description={description}
+                    star={star}
+                    price={price}
+                    total={total}
+                />
+            ))}
+
+        </div>
         <Footer />
     </div>
   )
 }
 
 export default Search;
+
+export async function getServerSideProps() {
+    const searchResults = await fetch("https://links.papareact.com/isz")
+    .then(res => res.json());
+
+    return {
+        props: {
+            searchResults,
+        },
+    };
+}

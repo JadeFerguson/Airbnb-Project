@@ -1,7 +1,7 @@
 This is project [Next.js](https://nextjs.org/) was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Overview
-This project is a front end clone of Airbnb to learn React.js, Next.js, and Tailwindcss.
+This project is a front end clone of Airbnb to learn React.js, Next.js, and Tailwindcss. It makes use of nodes and APIs as well. 
 
 ## Resources
 - [Tailwind Install](https://tailwindcss.com/docs/guides/nextjs)
@@ -10,3 +10,4 @@ This project is a front end clone of Airbnb to learn React.js, Next.js, and Tail
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 - [Date Range React Picker](https://github.com/hypeserver/react-date-range)
+- [Progress Bar](https://www.npmjs.com/package/@badrap/bar-of-progress)

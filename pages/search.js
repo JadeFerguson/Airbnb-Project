@@ -31,7 +31,7 @@ function Search({searchResults}) {
                     <p className="button">Cancellation Flexibility</p>
                     <p className="button">Type of Place </p>
                     <p className="button">Price</p>
-                    <p className="button">CRooms and Beds</p>
+                    <p className="button">Rooms and Beds</p>
                     <p className="button">More Filters</p>
                 </div>
             </section>

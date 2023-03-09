@@ -1,7 +1,7 @@
 This is project [Next.js](https://nextjs.org/) was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Overview
-This project is a front end clone of Airbnb to learn React.js, Next.js, and Tailwindcss. It makes use of nodes and APIs as well. 
+This project is a front end clone of Airbnb to learn React.js, Next.js, and Tailwindcss. It makes use of nodes and APIs to help create the front-end look. 
 
 ## Resources
 - [Tailwind Install](https://tailwindcss.com/docs/guides/nextjs)

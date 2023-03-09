@@ -4,6 +4,7 @@ import Footer from '../Components/Footer';
 import { useRouter } from 'next/router';
 import {format} from "date-fns";
 import InfoCard from '../Components/InfoCard';
+import Map from '../Components/Map';
 
 // Great thing about components with react you can use them across different pages
 function Search({searchResults}) {
@@ -31,28 +32,33 @@ function Search({searchResults}) {
                     <p className="button">Cancellation Flexibility</p>
                     <p className="button">Type of Place </p>
                     <p className="button">Price</p>
-                    <p className="button">CRooms and Beds</p>
+                    <p className="button">Rooms and Beds</p>
                     <p className="button">More Filters</p>
                 </div>
+
+                <div className="flex flex-col">
+                    {searchResults.map(
+                        ({ img, location, title, description, star, price, total }) => (
+                        <InfoCard 
+                            key={img}
+                            img={img}
+                            location={location}
+                            title={title}
+                            description={description}
+                            star={star}
+                            price={price}
+                            total={total}
+                        />
+                    ))}
+
+                </div>
+            </section>
+
+            <section className="hidden xl:inline-flex xl:min-w-[40%] sticky top-[74px] h-[calc(100vh-74px)]">
+                    <Map searchResults={searchResults}/>
             </section>
         </main>
 
-        <div className="flex flex-col">
-            {searchResults.map(
-                ({ img, location, title, description, star, price, total }) => (
-                <InfoCard 
-                    key={img}
-                    img={img}
-                    location={location}
-                    title={title}
-                    description={description}
-                    star={star}
-                    price={price}
-                    total={total}
-                />
-            ))}
-
-        </div>
         <Footer />
     </div>
   )

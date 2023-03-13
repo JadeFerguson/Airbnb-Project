@@ -23,6 +23,6 @@ This project is a front end clone of Airbnb to learn React.js, Next.js, and Tail
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 - [Date Range React Picker](https://github.com/hypeserver/react-date-range)
 - [Progress Bar](https://www.npmjs.com/package/@badrap/bar-of-progress)
-- [Mapbox](https://www.mapbox.com/)
-- [React Map](https://github.com/visgl/react-map-gl)
-- [Geolib](https://github.com/manuelbieh/geolib)
+- [Mapbox](https://www.mapbox.com/) - The key is a public key
+- [React Map](https://github.com/visgl/react-map-gl) - Used with Mapbox to make functional
+- [Geolib](https://github.com/manuelbieh/geolib) - Used to get markers for map
